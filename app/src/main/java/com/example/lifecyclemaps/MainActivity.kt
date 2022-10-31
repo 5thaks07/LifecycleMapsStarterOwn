@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun requestPermissions() {
-        if (ContextCompat.checkSelfPermission(this, LOCATION_SERVICE) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 0)
         } else {
             // Set "gpsPermission" to true in the lifecycle observer
